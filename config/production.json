@@ -1,0 +1,6 @@
+{
+  "port": 80,
+  "jwtSecret": "alexanderalexander",
+  "mongoUri": "mongodb+srv://AlexYakubovsky:Alex1509!@cluster0.rels7.mongodb.net/mern?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
