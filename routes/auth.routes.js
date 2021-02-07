@@ -12,7 +12,7 @@ const registerValidators = [
 ]
 
 const loginValidators = [
-    check('email', 'Введите корректный email').normalizeEmail().isEmail(),
+    check('email', 'Введите корректный email').normalizeEmail ({"gmail_remove_dots": false }).isEmail(),
     check('password', 'Введите пароль').exists()
 ]
 
@@ -53,6 +53,7 @@ router.post('/login', loginValidators, async (req, res) => {
         const errors = validationResult(req)
 
         if (!errors.isEmpty()) {
+            console.log(errors.isEmpty())
             return res.status(400).json({
                 errors: errors.array(),
                 message: 'Некорректные данные при входе в систему'

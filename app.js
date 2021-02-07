@@ -30,7 +30,7 @@ const start = async () => {
         app.listen(PORT, () => console.log(`Server has been started on port ${PORT}...`))
     } catch (e) {
         console.log(`Server error - ${e.message}`)
-        process.exit(1);
+        process.exit(1)
     }
 }
 
